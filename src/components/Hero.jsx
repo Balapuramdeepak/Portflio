@@ -276,16 +276,6 @@ export default function Hero() {
                 </span>
               </motion.div>
 
-              {/* Bottom-left: Python */}
-              <motion.div
-                className="absolute -bottom-4 left-6 glass border border-yellow-500/30 rounded-xl px-3 py-2 text-xs font-medium text-yellow-300 shadow-lg"
-                animate={{ y: [0, -7, 0] }}
-                transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-              >
-                <span className="flex items-center gap-1.5">
-                  <span className="text-base">🐍</span> Python
-                </span>
-              </motion.div>
             </div>
           </motion.div>
         </div>
