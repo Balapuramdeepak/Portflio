@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, ExternalLink, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import AnimateOnScroll from './AnimateOnScroll'
 import { projects } from '../data/portfolio'
 
@@ -68,21 +68,6 @@ export default function Projects() {
           </AnimatePresence>
         </motion.div>
 
-        {/* View more CTA */}
-        <AnimateOnScroll delay={0.2} className="text-center mt-12">
-          <motion.a
-            href={`https://github.com/`}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-secondary inline-flex"
-          >
-            <Github size={16} />
-            View All on GitHub
-            <ArrowRight size={16} />
-          </motion.a>
-        </AnimateOnScroll>
       </div>
     </section>
   )
@@ -158,28 +143,15 @@ function ProjectCard({ project }) {
           ))}
         </div>
 
-        {/* Links */}
-        <div className="flex items-center gap-3 pt-4 border-t border-white/[0.06]">
-          <motion.a
-            href={project.github}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-1.5 text-slate-500 hover:text-slate-300 text-xs font-medium transition-colors duration-200"
-          >
-            <Github size={14} /> Code
-          </motion.a>
-          <motion.a
-            href={project.live}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`flex items-center gap-1.5 ${project.accentColor} text-xs font-medium transition-all duration-200`}
-          >
-            <ExternalLink size={14} /> Live Demo
-          </motion.a>
+        {/* Footer */}
+        <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+          <span className={`text-xs font-medium ${project.accentColor} flex items-center gap-1.5`}>
+            <span className="w-1.5 h-1.5 rounded-full bg-current inline-block" />
+            {project.category} Project
+          </span>
 
           {/* Hover arrow */}
           <motion.div
-            className="ml-auto"
             animate={hovered ? { x: 4, opacity: 1 } : { x: 0, opacity: 0.4 }}
             transition={{ duration: 0.2 }}
           >
