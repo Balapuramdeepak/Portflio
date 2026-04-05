@@ -26,9 +26,10 @@ export default function Footer() {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center shadow-[0_0_20px_rgba(124,58,237,0.3)]">
                 <span className="font-display font-bold text-white text-base">T</span>
               </div>
-              <span className="font-display font-semibold text-slate-300">
-                Thrisha Reddy<span className="gradient-text">.</span>
-              </span>
+              <div className="flex flex-col leading-none">
+                <span className="font-display font-bold text-sm text-slate-100 tracking-wide">Thrisha Reddy</span>
+                <span className="text-[10px] text-violet-400 font-medium tracking-widest uppercase mt-0.5">Full Stack Dev</span>
+              </div>
             </motion.button>
             <p className="text-slate-600 text-xs max-w-[200px] text-center md:text-left leading-relaxed">
               Full Stack Developer · Building elegant solutions

@@ -58,12 +58,13 @@ export default function Navbar({ isDark, setIsDark }) {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center shadow-[0_0_20px_rgba(124,58,237,0.4)] group-hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] transition-shadow duration-300">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center shadow-[0_0_20px_rgba(124,58,237,0.4)] group-hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] transition-shadow duration-300 flex-shrink-0">
               <span className="font-display font-bold text-white text-base">T</span>
             </div>
-            <span className="font-display font-semibold text-slate-200 hidden sm:block">
-              Thrisha<span className="gradient-text">.</span>
-            </span>
+            <div className="hidden sm:flex flex-col leading-none">
+              <span className="font-display font-bold text-sm text-slate-100 tracking-wide">Thrisha Reddy</span>
+              <span className="text-[10px] text-violet-400 font-medium tracking-widest uppercase mt-0.5">Full Stack Dev</span>
+            </div>
           </motion.button>
 
           {/* Desktop nav */}
