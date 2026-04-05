@@ -221,8 +221,9 @@ export default function Hero() {
               </div>
 
               {/* Floating badges */}
+              {/* Top-right: Angular */}
               <motion.div
-                className="absolute -right-4 top-8 glass border border-violet-500/30 rounded-xl px-3 py-2 text-xs font-medium text-violet-300 shadow-lg"
+                className="absolute -right-6 top-6 glass border border-violet-500/30 rounded-xl px-3 py-2 text-xs font-medium text-violet-300 shadow-lg"
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
@@ -231,8 +232,31 @@ export default function Hero() {
                 </span>
               </motion.div>
 
+              {/* Top-left: TypeScript */}
               <motion.div
-                className="absolute -left-4 bottom-12 glass border border-blue-500/30 rounded-xl px-3 py-2 text-xs font-medium text-blue-300 shadow-lg"
+                className="absolute -left-8 top-6 glass border border-blue-400/30 rounded-xl px-3 py-2 text-xs font-medium text-blue-300 shadow-lg"
+                animate={{ y: [0, -7, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+              >
+                <span className="flex items-center gap-1.5">
+                  <span className="text-base">📘</span> TypeScript
+                </span>
+              </motion.div>
+
+              {/* Right-middle: C# */}
+              <motion.div
+                className="absolute -right-6 top-1/2 -translate-y-1/2 glass border border-pink-500/30 rounded-xl px-3 py-2 text-xs font-medium text-pink-300 shadow-lg"
+                animate={{ y: [0, 7, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+              >
+                <span className="flex items-center gap-1.5">
+                  <span className="text-base">#️⃣</span> C#
+                </span>
+              </motion.div>
+
+              {/* Left-middle: .NET */}
+              <motion.div
+                className="absolute -left-6 top-1/2 -translate-y-1/2 glass border border-blue-500/30 rounded-xl px-3 py-2 text-xs font-medium text-blue-300 shadow-lg"
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               >
@@ -241,13 +265,25 @@ export default function Hero() {
                 </span>
               </motion.div>
 
+              {/* Bottom-right: SQL */}
               <motion.div
-                className="absolute -bottom-2 right-8 glass border border-emerald-500/30 rounded-xl px-3 py-2 text-xs font-medium text-emerald-300 shadow-lg"
+                className="absolute -bottom-4 right-6 glass border border-emerald-500/30 rounded-xl px-3 py-2 text-xs font-medium text-emerald-300 shadow-lg"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
               >
                 <span className="flex items-center gap-1.5">
                   <span className="text-base">🗃️</span> SQL
+                </span>
+              </motion.div>
+
+              {/* Bottom-left: Python */}
+              <motion.div
+                className="absolute -bottom-4 left-6 glass border border-yellow-500/30 rounded-xl px-3 py-2 text-xs font-medium text-yellow-300 shadow-lg"
+                animate={{ y: [0, -7, 0] }}
+                transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+              >
+                <span className="flex items-center gap-1.5">
+                  <span className="text-base">🐍</span> Python
                 </span>
               </motion.div>
             </div>
