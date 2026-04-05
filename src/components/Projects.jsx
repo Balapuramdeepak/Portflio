@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ExternalLink, Lock } from 'lucide-react'
 import AnimateOnScroll from './AnimateOnScroll'
 import { projects } from '../data/portfolio'
 
-const categories = ['All', 'Enterprise', 'Security', 'Analytics', 'Productivity']
+const categories = ['All', 'Professional', 'ML / Security']
 
 export default function Projects() {
   const [filter, setFilter] = useState('All')
@@ -145,12 +145,28 @@ function ProjectCard({ project }) {
 
         {/* Footer */}
         <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
-          <span className={`text-xs font-medium ${project.accentColor} flex items-center gap-1.5`}>
-            <span className="w-1.5 h-1.5 rounded-full bg-current inline-block" />
-            {project.category} Project
-          </span>
+          {project.proprietary ? (
+            <span className="text-xs font-medium text-slate-500 flex items-center gap-1.5">
+              <Lock size={11} /> Proprietary · NDA
+            </span>
+          ) : project.live ? (
+            <motion.a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`flex items-center gap-1.5 ${project.accentColor} text-xs font-medium`}
+            >
+              <ExternalLink size={13} /> View Live
+            </motion.a>
+          ) : (
+            <span className={`text-xs font-medium ${project.accentColor} flex items-center gap-1.5`}>
+              <span className="w-1.5 h-1.5 rounded-full bg-current inline-block" />
+              {project.category}
+            </span>
+          )}
 
-          {/* Hover arrow */}
           <motion.div
             animate={hovered ? { x: 4, opacity: 1 } : { x: 0, opacity: 0.4 }}
             transition={{ duration: 0.2 }}
