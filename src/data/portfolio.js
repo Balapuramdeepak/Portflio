@@ -6,8 +6,8 @@ export const personalInfo = {
   email: 'thrisha6261@gmail.com',
   phone: '+91 9704754658',
   location: 'Hyderabad, India',
-  github: 'https://github.com/',
-  linkedin: 'https://linkedin.com/in/',
+  github: 'https://github.com/thrishamareddy',
+  linkedin: 'https://linkedin.com/in/', // update with your LinkedIn URL
   bio: `I'm a passionate Full Stack Developer with a strong foundation in both frontend elegance and backend robustness. Specializing in Angular, .NET, and SQL Server, I build enterprise-grade applications that handle real-world complexity — from CRM systems managing 100k+ records to dynamic, component-driven UIs that users love.
 
 With a B.Tech in Computer Science (Cyber Security) and a CGPA of 9.41, I bring both academic rigor and production-level experience. I believe great software is equal parts beautiful design and solid architecture.`,
