@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Loader from './components/Loader'
+import CustomCursor from './components/CustomCursor'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -33,7 +34,10 @@ export default function App() {
       <Loader isLoading={loading} />
 
       {!loading && (
-        <div className={`relative min-h-screen ${isDark ? 'bg-[#050508] text-slate-100' : 'bg-[#f8f7ff] text-slate-900'}`}>
+        <div className={`relative min-h-screen ${isDark ? 'bg-[#050508] text-slate-100' : 'bg-[#f8f7ff] text-slate-900'}`} style={{ cursor: 'none' }}>
+          {/* Magic cursor */}
+          <CustomCursor />
+
           {/* Persistent noise overlay */}
           <div className="noise fixed inset-0 pointer-events-none z-[998]" />
 
