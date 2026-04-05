@@ -85,13 +85,14 @@ export const projects = [
     category: 'Professional',
     featured: true,
     proprietary: true,
+    github: null,
     live: null,
   },
   {
     id: 2,
     title: 'Phish Hunter',
     description:
-      'An End-to-End Machine Learning project that classifies phishing and legitimate websites. Trained on content-based features like HTML tag-based attributes using Support Vector Machine and Random Forest models.',
+      'An End-to-End Machine Learning project that classifies phishing and legitimate websites. Trained on content-based HTML tag features using Support Vector Machine and Random Forest models — deployed live via Streamlit.',
     tech: ['Python', 'BeautifulSoup', 'Streamlit', 'Machine Learning', 'SVM', 'Random Forest'],
     color: 'from-blue-600/20 to-cyan-600/20',
     borderColor: 'border-blue-500/30',
@@ -100,7 +101,24 @@ export const projects = [
     category: 'ML / Security',
     featured: true,
     proprietary: false,
+    github: 'https://github.com/thrishamareddy/Phish-hunter',
     live: 'https://phish-hunter.streamlit.app/',
+  },
+  {
+    id: 3,
+    title: 'ThreeStep Verification',
+    description:
+      'A multi-layered 3-step user authentication system built with PHP & MySQL — combining password login, picture-based verification, and security questions to provide enhanced account security.',
+    tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    color: 'from-emerald-600/20 to-teal-600/20',
+    borderColor: 'border-emerald-500/30',
+    accentColor: 'text-emerald-400',
+    icon: '🔐',
+    category: 'Security',
+    featured: false,
+    proprietary: false,
+    github: 'https://github.com/thrishamareddy/Threestep',
+    live: null,
   },
 ]
 
